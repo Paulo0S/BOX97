@@ -1,0 +1,358 @@
+/* Estilos da base e do layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* monte de fonte (pra compatibilidade) */
+    font-family: -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.secao {
+    padding: 80px 0;
+}
+
+/* Texto */
+.titulo-secao {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subtitulo-secao {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.texto-primario {
+    color: #d71f26;
+}
+
+/* Hero (primeira coisa que o usuario ve quando entra no site) */
+.secao-hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #f9161646 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.titulo-hero {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.subtitulo-hero {
+    font-size: 1.3rem;
+    color: #ccc;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+}
+
+.botoes-hero {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.estatisticas-hero {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.item-estatistica {
+    text-align: center;
+}
+
+.numero-estatistica {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #d71f26;
+}
+
+.label-estatistica {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ccc;
+}
+
+/* Recursos (porque escolher e tals) */
+.secao-recursos {
+    background-color: #111;
+}
+
+.grade-recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cartao-recurso {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao-recurso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px #f9251633;
+}
+
+.icone-recurso {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cartao-recurso h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #d71f26;
+}
+
+.cartao-recurso p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Planos */
+.secao-planos {
+    background: linear-gradient(135deg, #2e2e2e 0%, #000 100%);
+}
+
+.grade-planos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cartao-plano {
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao-plano:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px #0000004d;
+}
+
+.cartao-plano.popular {
+    border: 2px solid #d71f26;
+    transform: scale(1.05);
+}
+
+.selo-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d71f26;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.cabecalho-plano {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cabecalho-plano h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.descricao-plano {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.preco-plano {
+    margin-bottom: 1rem;
+}
+
+.preco {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #d71f26;
+}
+
+.periodo {
+    color: #ccc;
+    margin-left: 0.5rem;
+}
+
+/* Contato */
+.secao-contato {
+    background-color: #111;
+}
+
+.conteudo-contato {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.info-contato h3 {
+    color: #d71f26;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.item-contato {
+    margin-bottom: 2rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.item-contato strong {
+    color: #fff;
+}
+
+/* Pra deixar as redes sociais formatadas (as cores dos icones são no proprio html, tem um comentario explicando melhor la) */
+.mapa-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa-contato h3 {
+    color: #d71f26;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.links-sociais h3 {
+    color: #d71f26;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.container-links-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.link-social:hover {
+    background-color: #d71f26;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #f9251631;
+}
+
+.icone-social {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.texto-social {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Rodape */
+.rodape {
+    background-color: #0a0a0a;
+    padding: 3rem 0 1rem;
+}
+
+.conteudo-rodape {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.secao-rodape h4 {
+    color: #d71f26;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.secao-rodape a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.secao-rodape a:hover {
+    color: #d71f26;
+}
+
+.secao-rodape p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.marca-rodape {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d71f26;
+    margin-bottom: 1rem;
+}
+
+.fundo-rodape {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    text-align: center;
+    color: #757575;
+}
